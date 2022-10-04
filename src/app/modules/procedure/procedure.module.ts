@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProcedureRoutingModule } from './procedure-routing.module';
-import { ProcedureComponent } from './pages/procedure/procedure.component';
-import { ProceduresComponent } from './pages/procedures/procedures.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProcedureViewComponent } from 'src/app/pages/procedure/view/procedure-view.component';
+import { ProcedureListComponent } from 'src/app/pages/procedure/list/procedure-list.component';
 
 
 @NgModule({
   declarations: [
-    ProcedureComponent,
-    ProceduresComponent
+    ProcedureViewComponent,
+    ProcedureListComponent
   ],
   imports: [
     CommonModule,

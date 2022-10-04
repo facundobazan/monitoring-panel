@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { addDoc, collection, collectionData, deleteDoc, doc, Firestore } from '@angular/fire/firestore';
-import { IProcedure } from '../core/models/procedure';
+import { Procedure } from 'src/app/core/models/procedure.interface';
 //import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class ProceduresService {
 
   constructor(private firestore: Firestore) { }
 
-  addProcedure(procedure: IProcedure) {
+  addProcedure(procedure: Procedure) {
     return addDoc(this.procedureRef, procedure);
   }
 
@@ -19,11 +19,11 @@ export class ProceduresService {
     return collectionData(this.procedureRef, { idField: 'id' });
   }
 
-  getProcedure(procedure: IProcedure) {
+  getProcedure(procedure: Procedure) {
     return doc(this.firestore, `procedures/${procedure.id}`);
   }
 
-  deleteProcedure(procedure: IProcedure) {
+  deleteProcedure(procedure: Procedure) {
     return deleteDoc(this.getProcedure(procedure));
   }
 }

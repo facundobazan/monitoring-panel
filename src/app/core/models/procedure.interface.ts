@@ -1,4 +1,4 @@
-export interface IProcedure {
+export interface Procedure {
     id?: string;
     signalCode: string;
     title: string;
