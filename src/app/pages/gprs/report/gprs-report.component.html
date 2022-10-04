@@ -1,0 +1,21 @@
+<label for="reportFile">Selecciona el reporte a analizar</label>
+<input type="file" id="fileUpload" name="reportFile" accept=".csv" (change)="readFile($event)">
+
+<table class="table" *ngIf="array.length > 0">
+    <thead>
+        <tr>
+            <th scope="col">REPRESENTANTE</th>
+            <th scope="col">IMEI</th>
+            <th scope="col">ESTADO</th>
+            <th scope="col">APN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of array">
+            <th scope="row">{{ a.representanteComercial | uppercase }}</th>
+            <td colspan="2"> {{ a.imei | uppercase}}</td>
+            <td>{{ a.estado | uppercase }}</td>
+            <td>{{ a.apn | uppercase }}</td>
+        </tr>
+    </tbody>
+</table>

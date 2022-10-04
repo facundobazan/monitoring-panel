@@ -1,0 +1,12 @@
+<h1>Procedimiento</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="procedureForm">
+    <div class="procedure-title">
+        Titulo: <input type="text" formControlName="title">
+    </div>
+    <div class="procedure-body">
+        Cuerpo: <textarea name="" id="" formControlName="body"></textarea>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+
+{{ procedureForm.value | json }}
