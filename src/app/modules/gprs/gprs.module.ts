@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { GprsReportComponent } from 'src/app/pages/gprs/report/gprs-report.component';
+import { GprsReportComponent } from 'src/app/layout/gprs/report/gprs-report.component';
 import { GprsRoutingModule } from './gprs-routing.module';
 
 

@@ -10,12 +10,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home/home.component';
+import { HomeComponent } from './layout/home/home/home.component';
+import { HeaderComponent } from './core/layout/header/header.component';
+import { FooterComponent } from './core/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

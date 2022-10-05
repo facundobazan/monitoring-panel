@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProcedureListComponent } from 'src/app/pages/procedure/list/procedure-list.component';
-import { ProcedureViewComponent } from 'src/app/pages/procedure/view/procedure-view.component';
+import { ProcedureListComponent } from 'src/app/layout/procedure/list/procedure-list.component';
+import { ProcedureViewComponent } from 'src/app/layout/procedure/view/procedure-view.component';
 
 const routes: Routes = [
   {
