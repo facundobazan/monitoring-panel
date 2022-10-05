@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "monitoring-panel-fd95c"
+  },
+  "targets": {
+    "monitoring-panel-fd95c": {
+      "hosting": {
+        "monitoring-panel": [
+          "monitoring-panel-fd95c"
+        ]
+      }
+    }
   }
 }

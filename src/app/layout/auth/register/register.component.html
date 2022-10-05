@@ -1,0 +1,30 @@
+<div>
+    <h1>Registrarse</h1>
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div>
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" formControlName="email">
+            <div *ngIf="registerForm.get('email')?.dirty && registerForm.get('email')?.hasError">
+                <p *ngIf="registerForm.get('email')?.errors?.['required']">El campo es requerido</p>
+                <p *ngIf="registerForm.get('email')?.errors?.['minlength']">El campo no puede tener menos de {{
+                    registerForm.get('email')?.errors?.['minlength'].requiredLength }} caracteres.</p>
+                <p *ngIf="registerForm.get('email')?.errors?.['maxlength']">El campo no puede tener mas de {{
+                    registerForm.get('email')?.errors?.['maxlength'].requiredLength }} caracteres.</p>
+            </div>
+        </div>
+        <div>
+            <label for="password">Contraseña: </label>
+            <input type="password" id="password" name="password" formControlName="password">
+            <div *ngIf="registerForm.get('password')?.dirty && registerForm.get('email')?.hasError">
+                <p *ngIf="registerForm.get('password')?.errors?.['required']">El campo es requerido</p>
+                <p *ngIf="registerForm.get('password')?.errors?.['minlength']">El campo no puede tener menos de {{
+                    registerForm.get('password')?.errors?.['minlength'].requiredLength }} caracteres.</p>
+                <p *ngIf="registerForm.get('password')?.errors?.['maxlength']">El campo no puede tener mas de {{
+                    registerForm.get('password')?.errors?.['maxlength'].requiredLength }} caracteres.</p>
+            </div>
+        </div>
+        <div>
+            <button [disabled]="registerForm.invalid">Registrarse</button>
+        </div>
+    </form>
+</div>

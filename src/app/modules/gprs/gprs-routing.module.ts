@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GprsReportComponent } from 'src/app/pages/gprs/report/gprs-report.component';
+import { GprsReportComponent } from 'src/app/layout/gprs/report/gprs-report.component';
 
 const routes: Routes = [{
   path: '',
