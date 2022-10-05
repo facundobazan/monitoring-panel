@@ -5,7 +5,7 @@ import { ProceduresService } from 'src/app/services/procedures/procedures.servic
 @Component({
   selector: 'app-procedure',
   templateUrl: './procedure-view.component.html',
-  styleUrls: ['./procedure-view.component.sass']
+  styleUrls: ['./procedure-view.component.scss']
 })
 export class ProcedureViewComponent implements OnInit {
   procedureForm!: FormGroup;

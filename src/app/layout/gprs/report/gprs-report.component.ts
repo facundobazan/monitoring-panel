@@ -5,7 +5,7 @@ import { GprsService } from 'src/app/services/gprs/gprs.service';
 @Component({
   selector: 'app-gprs-report',
   templateUrl: './gprs-report.component.html',
-  styleUrls: ['./gprs-report.component.sass']
+  styleUrls: ['./gprs-report.component.scss']
 })
 export class GprsReportComponent implements OnInit {
   private reader = new FileReader();
