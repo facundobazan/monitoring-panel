@@ -1,41 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /* Variables */
-// fonts
-$Poppins: 'Poppins', sans-serif
 
-// colors
-$dark: rgb(29,29,29)
-$light: rgb(0,0,0)
-$primary: rgb(162, 162, 246)
-$bg: rgb(244, 244, 255)
+$fonts: (
+  "default": (
+    "Poppins",
+    sans-serif,
+  ),
+);
 
-// spacing
-$spacing-md: 16px
-@spacing-md: 32px
+$colors: (
+  "dark": #1d1d1d,
+  "light": #000,
+  "primary": #a2a2f6,
+  "danger": #ff4747,
+  "bg": #f4f4ff,
+);
 
-// border radius
-$bRadius: 12px
+$spacings: (
+  "sm": 8px,
+  "md": 16px,
+  "lg": 32px,
+);
 
-// header height
-$headerHeight: 100px
+$radius: (
+  "sm": 5px,
+  "md": 10px,
+  "lg": 15px,
+);
 
-@mixin breakpoint($point)
-    @if $point == md
-        // 768px
-        @media (min-width: 48em)
-            @content
+$headerHeight: 100px;
 
-/* You can add global styles to this file, and also import other style files */
-*
-    box-sizing: border-box
-    margin: 0
-    padding: 0
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-body
-    width: 100%
-    font: 1em $Poppins
+body {
+  width: 100%;
+  font-size: 1em;
+  font-family: map-get($fonts, "default");
+}
 
-#root
-    height: 100%
-    
+#root {
+  height: 100%;
+}
