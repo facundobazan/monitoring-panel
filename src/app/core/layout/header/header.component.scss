@@ -1,0 +1,56 @@
+//@import url(../../../../styles.scss);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+
+  img {
+    cursor: pointer;
+  }
+
+  .nav {
+    &-link {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        padding: 0px 20px;
+
+        a {
+          transition: all 0.3s ease 0s;
+
+          &:hover {
+            color: #0088a9;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      button {
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+      }
+    }
+
+    li,
+    a,
+    button {
+      display: flex;
+      font-weight: 500;
+      align-items: center;
+      padding: 30px 10%;
+
+      &:hover {
+        background-color: rgba(0, 136, 169, 0.8);
+      }
+    }
+  }
+}
